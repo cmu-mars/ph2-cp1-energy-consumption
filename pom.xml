@@ -23,6 +23,14 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>rainbow</groupId>
+      <artifactId>rainbow-brass</artifactId>
+      <version>2.0-SNAPSHOT</version>
+      <scope>system</scope>
+      <systemPath>${basedir}/lib/rainbow-brass-2.0-SNAPSHOT2.jar</systemPath>
+    </dependency>
   </dependencies>
 
   <build>
