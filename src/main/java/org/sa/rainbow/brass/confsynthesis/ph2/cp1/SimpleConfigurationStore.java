@@ -21,7 +21,7 @@ public class SimpleConfigurationStore implements ConfigurationProvider {
 
     @Override
     public void populate() {
-        System.out.println("Readeing from " + this.source);
+        System.out.println("Reading from " + this.source);
         this.loadFromFile(this.source);
     }
 

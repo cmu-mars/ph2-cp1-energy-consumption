@@ -6,7 +6,25 @@ public class EnergyConsumptionPredictor {
 
     // TODO check the signature
     public double getEnergyConsumption(Configuration config, double time) {
+        if(config == null) {
+            throw new IllegalArgumentException("The configuration cannot be null");
+        }
+
         double powerLoad = config.getEnergyDischargeRate();
+
+        if(powerLoad <= 0.0) {
+            throw new IllegalArgumentException("The power load has to be greater than 0");
+        }
+
+        if(time == 0.0) {
+            throw new IllegalArgumentException("There are no more tasks to do");
+        }
+
+        if(time < 0.0) {
+            throw new IllegalArgumentException("The time to complete tasks cannot be negative");
+        }
+
+
         return this.getEnergyConsumption(powerLoad, time);
     }
 

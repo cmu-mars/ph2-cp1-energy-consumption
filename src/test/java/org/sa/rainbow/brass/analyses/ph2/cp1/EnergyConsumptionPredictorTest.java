@@ -2,6 +2,11 @@ package org.sa.rainbow.brass.analyses.ph2.cp1;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.sa.rainbow.brass.confsynthesis.Configuration;
+import org.sa.rainbow.brass.confsynthesis.ConfigurationProvider;
+import org.sa.rainbow.brass.confsynthesis.ph2.cp1.SimpleConfigurationStore;
+
+import java.util.HashMap;
 
 public class EnergyConsumptionPredictorTest {
 
@@ -53,6 +58,15 @@ public class EnergyConsumptionPredictorTest {
     }
 
     @Test
-    public void getEnergyConsumption() {
+    public void getEnergyConsumption4() {
+        ConfigurationProvider configProvider = new SimpleConfigurationStore();
+        configProvider.populate();
+
+        HashMap<String, Configuration> configs = configProvider.getConfigurations();
+        Configuration config = configs.get("sol_32");
+
+        EnergyConsumptionPredictor predictor = new EnergyConsumptionPredictor();
+        double consumption = predictor.getEnergyConsumption(config, 12);
+        Assert.assertEquals(660, consumption, 0.0);
     }
 }
