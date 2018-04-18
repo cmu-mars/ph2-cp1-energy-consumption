@@ -4,19 +4,10 @@ import org.sa.rainbow.brass.confsynthesis.Configuration;
 
 public class EnergyConsumptionPredictor {
 
-//    public double energyConsumption(String configID, double powerConsumption, double speed)      "config_id": "432",
-//                                       "power_load": 76,
-//                                       "speed": 0.7) {
-//
-//    }
-
     // TODO check the signature
-    public double energyConsumption(Configuration config, double time, String configID) {
-        // TODO get energyConsumption of current configuration
-        // TODO multiply the energyConsumption by the time to do all tasks
-        // TODO return energyConsumption that will be consumed
-
-        throw new UnsupportedOperationException("Implement");
+    public double getEnergyConsumption(Configuration config, double time) {
+        double powerLoad = config.getEnergyDischargeRate();
+        return this.getEnergyConsumption(powerLoad, time);
     }
 
     /**

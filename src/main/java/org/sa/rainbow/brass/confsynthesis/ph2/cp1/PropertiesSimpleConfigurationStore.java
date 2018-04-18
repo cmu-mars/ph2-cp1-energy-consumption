@@ -6,7 +6,7 @@ public class PropertiesSimpleConfigurationStore {
 
     public static final String CONFIGURATIONS_SOURCE_PROPKEY = "configsource";
     public static final String CONFIGURATIONS_SOURCE_FILENAME = "config_list.json";
-    public static final String CONFIGURATIONS_SOURCE_PATH = System.getProperty("user.dir");
+    public static final String CONFIGURATIONS_SOURCE_PATH = System.getProperty("user.dir") + "/src/main/resources/";
 
     public static final Properties DEFAULT = new Properties();
 

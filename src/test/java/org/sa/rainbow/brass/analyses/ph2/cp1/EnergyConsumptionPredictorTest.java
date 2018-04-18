@@ -52,4 +52,7 @@ public class EnergyConsumptionPredictorTest {
         double consumption = predictor.getEnergyConsumption(20, 0.0);
     }
 
+    @Test
+    public void getEnergyConsumption() {
+    }
 }
