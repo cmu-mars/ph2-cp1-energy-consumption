@@ -31,6 +31,12 @@
       <scope>system</scope>
       <systemPath>${basedir}/lib/rainbow-brass-2.0-SNAPSHOT2.jar</systemPath>
     </dependency>
+
+    <dependency>
+      <groupId>com.googlecode.json-simple</groupId>
+      <artifactId>json-simple</artifactId>
+      <version>1.1.1</version>
+    </dependency>
   </dependencies>
 
   <build>
